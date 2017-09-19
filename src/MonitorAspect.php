@@ -6,11 +6,9 @@ namespace AOPTESTS;
 
 use Go\Aop\Intercept\MethodInvocation;
 use Go\Aop\Aspect;
-use Go\Aop\Intercept\FieldAccess;
-use Go\Lang\Annotation\After;
 use Go\Lang\Annotation\Before;
-use Go\Lang\Annotation\Around;
-use Go\Lang\Annotation\Pointcut;
+use Go\Lang\Annotation as Pointcut;
+
 
 class MonitorAspect implements Aspect
 {
@@ -31,5 +29,15 @@ class MonitorAspect implements Aspect
         ' with arguments: ',
         json_encode($invocation->getArguments()),
         "<br>\n";
+    }
+
+    /**
+     * Before class instance initialization.
+     *
+     * @Pointcut\Before("initialization(AOPTESTS\Example)")
+     */
+    public function beforeInstanceInitialization()
+    {
+        echo 'It invokes before class instance is initialized.'."\n\n\n";
     }
 }
