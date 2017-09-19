@@ -15,6 +15,6 @@
     }
   },
   "require": {
-    "goaop/framework": "0.5"
+    "goaop/framework": "^2.1"
   }
 }

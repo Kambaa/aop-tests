@@ -11,7 +11,6 @@ namespace AOPTESTS;
 
 use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
-use AOPTESTS\MonitorAspect;
 
 class ApplicationAspectKernel extends AspectKernel
 {

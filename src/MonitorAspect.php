@@ -1,8 +1,18 @@
 <?php
-namespace AOPTESTS;
-use Go\Aop\Intercept\MethodInvocation;
 
-class MonitorAspect implements \Go\Aop\Aspect
+
+namespace AOPTESTS;
+
+
+use Go\Aop\Intercept\MethodInvocation;
+use Go\Aop\Aspect;
+use Go\Aop\Intercept\FieldAccess;
+use Go\Lang\Annotation\After;
+use Go\Lang\Annotation\Before;
+use Go\Lang\Annotation\Around;
+use Go\Lang\Annotation\Pointcut;
+
+class MonitorAspect implements Aspect
 {
     /**
      * Method that will be called before real method
