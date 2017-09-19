@@ -33,11 +33,11 @@ class MonitorAspect implements Aspect
 
     /**
      * Before class instance initialization.
-     *
+     * fixme : does not work.
      * @Pointcut\Before("initialization(AOPTESTS\Example)")
      */
     public function beforeInstanceInitialization()
     {
-        echo 'It invokes before class instance is initialized.'."\n\n\n";
+        echo 'It invokes before class instance is initialized.' . "\n\n\n";
     }
 }
