@@ -1,0 +1,20 @@
+{
+  "name": "kambaa/aop-tests",
+  "description": "Learning Go-AOP framework",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yusuf Gündüz",
+      "email": "yusuf.gunduz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "AOPTESTS\\": "src\\"
+    }
+  },
+  "require": {
+    "goaop/framework": "0.5"
+  }
+}
