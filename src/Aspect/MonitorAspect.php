@@ -1,13 +1,12 @@
 <?php
 
 
-namespace AOPTESTS;
+namespace AOPTESTS\Aspect;
 
 
 use Go\Aop\Intercept\MethodInvocation;
 use Go\Aop\Aspect;
 use Go\Lang\Annotation\Before;
-use Go\Lang\Annotation as Pointcut;
 
 
 class MonitorAspect implements Aspect
@@ -16,7 +15,7 @@ class MonitorAspect implements Aspect
      * Method that will be called before real method
      *
      * @param MethodInvocation $invocation Invocation
-     * @Before("execution(public AOPTESTS\Example->*(*))")
+     * @Before("execution(public AOPTESTS\Service\ExampleService->tst(*))")
      */
     public function beforeMethodExecution(MethodInvocation $invocation)
     {
@@ -28,16 +27,16 @@ class MonitorAspect implements Aspect
         '()',
         ' with arguments: ',
         json_encode($invocation->getArguments()),
-        "<br>\n";
+        PHP_EOL;
     }
 
     /**
      * Before class instance initialization.
      * fixme : does not work.
-     * @Pointcut\Before("initialization(AOPTESTS\Example)")
+     * @Before("initialization(AOPTESTS\Service\**)")
      */
     public function beforeInstanceInitialization()
     {
-        echo 'It invokes before class instance is initialized.' . "\n\n\n";
+        echo 'It invokes before class instance is initialized.' . PHP_EOL;
     }
 }

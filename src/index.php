@@ -7,9 +7,8 @@
  */
 
 // Initialize an application aspect container
-use AOPTESTS\ApplicationAspectKernel;
-use AOPTESTS\Example;
-
+use AOPTESTS\Service\ExampleService;
+use AOPTESTS\Utils\ApplicationAspectKernel;
 
 require_once '../vendor/autoload.php';
 
@@ -25,7 +24,7 @@ $applicationAspectKernel->init(array(
 ));
 
 
-$e=new Example();
+$e = new ExampleService();
 
 $x= $e->tst("xxx");
 

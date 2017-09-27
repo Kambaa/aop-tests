@@ -6,9 +6,10 @@
  * Time: 11:02 AM
  */
 
-namespace AOPTESTS;
+namespace AOPTESTS\Utils;
 
 
+use AOPTESTS\Aspect\MonitorAspect;
 use Go\Core\AspectContainer;
 use Go\Core\AspectKernel;
 
