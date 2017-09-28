@@ -3,6 +3,8 @@
 namespace AOPTESTS\Service;
 
 
+use Exception;
+
 class ExampleService
 {
     public function __construct()
@@ -18,6 +20,7 @@ class ExampleService
     public function method1()
     {
         echo 'method1 execution' . PHP_EOL;
+        throw new Exception("wasdasd");
     }
 
     public function method2()

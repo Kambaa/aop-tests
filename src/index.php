@@ -25,10 +25,4 @@ $applicationAspectKernel->init(array(
 
 
 $e = new ExampleService();
-
-$x= $e->tst("xxx");
-
-echo $x;
-
-
-
+$e->method3();
