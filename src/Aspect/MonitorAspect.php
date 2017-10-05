@@ -36,7 +36,7 @@ class MonitorAspect implements Aspect
     /**
      * Before class instance initialization.
      * fixme : does not work.
-     * @Before("initialization(AOPTESTS\Service\**)")
+     * @Before("staticinitialization(AOPTESTS\Service\**)")
      */
     public function beforeInstanceInitialization()
     {
